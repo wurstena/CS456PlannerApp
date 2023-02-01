@@ -10,17 +10,19 @@ import { getCategories, getTasksData, getThisMonthTasks, getThisWeekTasks, getTo
 export default function TasksScreen({ route, navigation }) {
   const [value, setValue] = useState(false); // integer state
 
-  navigation.setOptions({
-    headerRight: () => (
-      <Ionicons.Button
-        onPress={() => navigation.navigate("Add a Task", { previous: "Tasks" })}
-        color="#707070"
-        backgroundColor="#f8f8f8"
-        name="add"
-        size="30"
-      />
-    ),
-  });
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <Ionicons.Button
+          onPress={() => navigation.navigate("Add a Task", { previous: "Tasks" })}
+          color="#707070"
+          backgroundColor="#f8f8f8"
+          name="add"
+          size="30"
+        />
+      ),
+    });
+  }, []);
 
   function showTask(index) {
     navigation.navigate("View Task", { previous: "Tasks", index: { index } })

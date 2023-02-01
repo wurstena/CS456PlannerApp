@@ -9,17 +9,19 @@ import { getCategories, getGraphData, getPriorityData, getTasksData, shufflePrio
 
 
 export default function DashboardScreen({ route, navigation }) {
-    navigation.setOptions({
-        headerRight: () => (
-            <Ionicons.Button
-                onPress={() => navigation.navigate("Add a Task", { previous: "Dashboard" })}
-                color="#707070"
-                backgroundColor="#f8f8f8"
-                name="add"
-                size="30"
-            />
-        ),
-    });
+    useEffect(() => {
+        navigation.setOptions({
+            headerRight: () => (
+                <Ionicons.Button
+                    onPress={() => navigation.navigate("Add a Task", { previous: "Dashboard" })}
+                    color="#707070"
+                    backgroundColor="#f8f8f8"
+                    name="add"
+                    size="30"
+                />
+            ),
+        });
+    }, []);
 
     // const [listOfTasks, setListOfTasks] = useState([])
     // const [listOfCompletedTasks, setListOfCompletedTasks] = useState([])

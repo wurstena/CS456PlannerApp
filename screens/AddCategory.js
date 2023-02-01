@@ -1,28 +1,30 @@
 import { Ionicons } from '@expo/vector-icons';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Alert, Button, Dimensions, Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { ColorPicker } from 'react-native-status-color-picker';
 import { saveCategory } from '../storage/saveInput';
 
 export default function AddCategoryScreen({ route, navigation }) {
     let previous = route.params.previous
-    navigation.setOptions({
-        headerLeft: () => (
-            <Ionicons.Button
-                onPress={() => navigation.navigate(previous, { update: false })}
-                color="#707070"
-                backgroundColor="#f8f8f8"
-                name="close"
-                size="30"
-            />
-        ),
-        headerRight: () => (
-            <Button
-                title="Save"
-                onPress={() => { handleSave() }}
-            />
-        )
-    });
+    useEffect(() => {
+        navigation.setOptions({
+            headerLeft: () => (
+                <Ionicons.Button
+                    onPress={() => navigation.navigate(previous, { update: false })}
+                    color="#707070"
+                    backgroundColor="#f8f8f8"
+                    name="close"
+                    size="30"
+                />
+            ),
+            headerRight: () => (
+                <Button
+                    title="Save"
+                    onPress={() => { handleSave() }}
+                />
+            )
+        });
+    }, []);
 
     function createAlert(message) {
         Alert.alert(
