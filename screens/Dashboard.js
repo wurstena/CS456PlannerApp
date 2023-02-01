@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { KeyboardAvoidingView, Button, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView, Dimensions } from 'react-native';
-import Task from '../components/Task';
 import { Ionicons } from '@expo/vector-icons';
-import { completeTask, task_list, completed_task_list, getGraphData, getPriorityData, getCategories, category_list, shufflePriorityData, getTasksData } from '../storage/saveInput';
 import { useIsFocused } from "@react-navigation/native";
-import { PieChart } from 'react-native-svg-charts'
+import React, { useEffect, useRef, useState } from 'react';
+import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import ConfettiCannon from 'react-native-confetti-cannon';
+import { PieChart } from 'react-native-svg-charts';
+import Task from '../components/Task';
+import { getCategories, getGraphData, getPriorityData, getTasksData, shufflePriorityData } from '../storage/saveInput';
 
 
 export default function DashboardScreen({ route, navigation }) {

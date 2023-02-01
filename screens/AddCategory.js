@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Alert, Keyboard, TextInput, ScrollView, Button, View, Text, StyleSheet, KeyboardAvoidingView } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
-import { Dimensions } from 'react-native';
+import React, { useState } from 'react';
+import { Alert, Button, Dimensions, Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { ColorPicker } from 'react-native-status-color-picker';
-import { saveCategory } from '../storage/saveInput'
+import { saveCategory } from '../storage/saveInput';
 
 export default function AddCategoryScreen({ route, navigation }) {
     let previous = route.params.previous

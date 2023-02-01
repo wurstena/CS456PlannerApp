@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { View, Text, StyleSheet } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import * as React from 'react';
+import { StyleSheet, Text, View } from "react-native";
 
 export default function CalendarScreen({ navigation, route }) {
   navigation.setOptions({

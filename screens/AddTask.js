@@ -1,15 +1,12 @@
-import React, { Component, useState, useEffect, useRef } from 'react';
-import { Alert, Pressable, Modal, Keyboard, TextInput, ScrollView, Button, View, Text, StyleSheet, KeyboardAvoidingView } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
-import ModalDropdown, { select } from 'react-native-modal-dropdown';
-import { Dimensions, TouchableWithoutFeedback } from 'react-native';
-import { ColorPicker } from 'react-native-status-color-picker';
-import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
-import saveTasks, { rewards_list, category_list, saveCategory, saveReward, getCategories, getRewards } from '../storage/saveInput'
-import { useIsFocused } from "@react-navigation/native";
 import DateTimePicker from '@react-native-community/datetimepicker';
+import React, { useEffect, useRef, useState } from 'react';
+import { Alert, Button, Dimensions, Keyboard, KeyboardAvoidingView, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import moment from 'moment';
+import ModalDropdown from 'react-native-modal-dropdown';
+import RadioForm from 'react-native-simple-radio-button';
+import { ColorPicker } from 'react-native-status-color-picker';
+import saveTasks, { getCategories, getRewards, saveCategory, saveReward } from '../storage/saveInput';
 
 let deviceWidth = Dimensions.get('window').width
 

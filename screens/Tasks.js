@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { KeyboardAvoidingView, Dimensions, Button, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView } from 'react-native';
-import Task from '../components/Task';
 import { Ionicons } from '@expo/vector-icons';
-import { completeTask, task_list, completed_task_list, getTasksData, getCategories, getTodayTasks, getThisWeekTasks, getThisMonthTasks } from '../storage/saveInput';
 import { useIsFocused } from "@react-navigation/native";
+import React, { useEffect, useRef, useState } from 'react';
+import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import ConfettiCannon from 'react-native-confetti-cannon';
+import Task from '../components/Task';
+import { getCategories, getTasksData, getThisMonthTasks, getThisWeekTasks, getTodayTasks } from '../storage/saveInput';
 
 
 export default function TasksScreen({ route, navigation }) {

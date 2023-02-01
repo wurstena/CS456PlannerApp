@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { KeyboardAvoidingView, Button, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView } from 'react-native';
-import Category from '../components/Category';
-import Reward from '../components/Reward';
 import { Ionicons } from '@expo/vector-icons';
-import { completeTask, category_list, getCategories, getRewards } from '../storage/saveInput';
-import { useIsFocused } from "@react-navigation/native";
+import React, { useState } from 'react';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Reward from '../components/Reward';
+import { getRewards } from '../storage/saveInput';
 
 export default function RewardManagerScreen({ navigation, route }) {
   const [value, setValue] = useState(0);

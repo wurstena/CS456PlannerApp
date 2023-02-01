@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Alert, Keyboard, TextInput, ScrollView, Button, View, Text, StyleSheet, KeyboardAvoidingView } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
-import { Dimensions } from 'react-native';
-import { ColorPicker } from 'react-native-status-color-picker';
-import { saveCategory, getCategories } from '../storage/saveInput'
-import { useIsFocused } from "@react-navigation/native";
+import React, { useState } from 'react';
+import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
+import { getCategories } from '../storage/saveInput';
 
 
 export default function ViewCategoryScreen({ route, navigation }) {

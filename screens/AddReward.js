@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { Alert, Keyboard, TextInput, ScrollView, Button, View, Text, StyleSheet, KeyboardAvoidingView } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
-import { Dimensions } from 'react-native';
-import { ColorPicker } from 'react-native-status-color-picker';
-import { saveCategory, saveReward } from '../storage/saveInput'
+import React, { useState } from 'react';
+import { Alert, Button, Dimensions, Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { saveReward } from '../storage/saveInput';
 
 export default function AddRewardScreen({ route, navigation }) {
     let previous = route.params.previous

@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import moment from 'moment';
-import { Alert, Keyboard, TextInput, ScrollView, Button, View, Text, StyleSheet, KeyboardAvoidingView } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
-import { Dimensions } from 'react-native';
-import { ColorPicker } from 'react-native-status-color-picker';
-import { saveCategory, getCategories, getRewards, getTasksData, deleteTask, getPriorityData } from '../storage/saveInput'
-import { useIsFocused } from "@react-navigation/native";
+import moment from 'moment';
+import React, { useState } from 'react';
+import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { deleteTask, getPriorityData, getTasksData } from '../storage/saveInput';
 
 
 export default function ViewTaskScreen({ route, navigation }) {

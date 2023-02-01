@@ -1,4 +1,3 @@
-import CalendarScreen from "../screens/Calendar"
 import CategoryManagerScreen from "../screens/CategoryManager"
 import DashboardScreen from "../screens/Dashboard"
 import RewardManagerScreen from "../screens/RewardManager"

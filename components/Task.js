@@ -1,7 +1,7 @@
 import moment from 'moment';
-import React, { useState, useRef } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
-import { completeTask, completePriorityTask, task_list, completed_task_list } from '../storage/saveInput';
+import React from 'react';
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { completePriorityTask, completeTask } from '../storage/saveInput';
 
 const Task = (props) => {
   function completeTaskAtIndex(index, value) {
